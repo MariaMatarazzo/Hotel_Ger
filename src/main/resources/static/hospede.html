@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8">
+  <title>Hóspedes - Gerenciamento de Hotel</title>
+
+  <!-- Bootstrap -->
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
+
+  <!-- jQuery -->
+  <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+
+  <!-- Arquivo JS separado -->
+  <script src="js/hospede.js" defer></script>
+</head>
+<body>
+  <div class="container">
+    <!-- Cabeçalho -->
+    <header class="d-flex flex-wrap justify-content-center py-3 mb-4 border-bottom">
+      <a href="#" class="d-flex align-items-center mb-3 mb-md-0 me-md-auto text-dark text-decoration-none">
+        <span class="fs-4">Gerenciamento de Hotel</span>
+      </a>
+      <ul class="nav nav-pills">
+        <li class="nav-item"><a href="index.html" class="nav-link">Home</a></li>
+        <li class="nav-item"><a href="hospede.html" class="nav-link active">Hóspedes</a></li>
+        <li class="nav-item"><a href="quarto.html" class="nav-link">Quartos</a></li>
+        <li class="nav-item"><a href="reserva.html" class="nav-link">Reservas</a></li>
+      </ul>
+    </header>
+
+    <!-- Conteúdo principal -->
+    <div class="content">
+      <h2>Hóspedes</h2>
+      <button class="btn btn-primary mb-3" onclick="showAddGuestForm()">+ Incluir</button>
+
+      <!-- Tabela -->
+      <table class="table">
+        <thead>
+          <tr>
+            <th>Nome</th>
+            <th>Email</th>
+            <th>Telefone</th>
+            <th>Ações</th>
+          </tr>
+        </thead>
+        <tbody id="guestTableBody">
+          <!-- Hóspedes serão carregados aqui -->
+        </tbody>
+      </table>
+    </div>
+
+    <!-- Modal/Formulário -->
+    <div id="guestFormModal" style="display:none;">
+      <h3 id="formTitle">Incluir Hóspede</h3>
+      <form id="guestForm">
+        <input type="hidden" id="guestId">
+
+        <div class="mb-3">
+          <label for="guestName" class="form-label">Nome</label>
+          <input type="text" class="form-control" id="guestName" required>
+        </div>
+
+        <div class="mb-3">
+          <label for="guestEmail" class="form-label">Email</label>
+          <input type="email" class="form-control" id="guestEmail" required>
+        </div>
+
+        <div class="mb-3">
+          <label for="guestTelefone" class="form-label">Telefone</label>
+          <input type="tel" class="form-control" id="guestTelefone" required>
+        </div>
+
+        <button type="submit" class="btn btn-primary">Salvar</button>
+        <button type="button" class="btn btn-secondary" onclick="closeGuestForm()">Cancelar</button>
+      </form>
+    </div>
+  </div>
+</body>
+</html>
