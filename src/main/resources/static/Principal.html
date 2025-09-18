@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+  <meta charset="UTF-8">
+  <title>Hotel Management</title>
+  
+  <!-- Bootstrap CSS -->
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
+  
+  <!-- Bootstrap JS -->
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+
+  <style>
+    .img-fluid {
+      width: 50%;
+      max-height: 500px;
+      object-fit: cover;
+      padding: 0.4rem;
+    }
+  </style>
+</head>
+<body>
+  <div class="container">
+    <!-- Cabeçalho / Menu -->
+    <header class="d-flex flex-wrap justify-content-center py-3 mb-4 border-bottom">
+      <a href="#" class="d-flex align-items-center mb-3 mb-md-0 me-md-auto text-dark text-decoration-none">
+        <span class="fs-4 fw-bold">Gerenciar Hotel</span>
+      </a>
+
+      <ul class="nav nav-pills">
+        <li class="nav-item"><a href="hospede.html" class="nav-link active">Home</a></li>
+        <li class="nav-item"><a href="hospede.html" class="nav-link">Hóspedes</a></li>
+        <li class="nav-item"><a href="quarto.html" class="nav-link">Quartos</a></li>
+        <li class="nav-item"><a href="reserva.html" class="nav-link">Reservas</a></li>
+      </ul>
+    </header>
+
+    <!-- Conteúdo Principal -->
+    <main class="content text-center">
+      <h1>Bem-vindo ao Sistema de Gerenciamento de Hotéis</h1>
+      <p class="lead">Utilize o menu superior para navegar entre hóspedes, quartos e reservas.</p>
+
+      <div class="d-flex flex-wrap justify-content-center">
+        <img src="images/hotel2.jpg" class="img-fluid rounded shadow" alt="Hotel Image">
+        <img src="images/hotel1.jpg" class="img-fluid rounded shadow" alt="Hotel Image">
+      </div>
+    </main>
+
+    <!-- Rodapé -->
+    <footer class="d-flex flex-wrap justify-content-between align-items-center py-3 mt-4 border-top">
+      <div class="col-md-4 mb-0 text-muted">
+        &copy; 2024 Gerenciamento de Hotel SESI-SENAI
+      </div>
+    </footer>
+  </div>
+</body>
+</html>
